@@ -20,11 +20,7 @@ typedef enum result
     FAILURE=1
 } RESULT;
 
-/*lpush key string*/
-RESULT lpush(char *key, char *string);
-
-/*lrange key start end*/
-RESULT lrange(char *key, int start, int end);
+redisReply *execRedisCmd(char *cmd);
 
 #ifdef __cplusplus
 extern "C"
